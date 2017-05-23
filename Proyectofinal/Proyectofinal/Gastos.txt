@@ -1,0 +1,6 @@
+﻿E;Elevador;P
+G;Garaje;I
+C;Zona común;I
+P;Patio;I
+W;Wifi;I
+V;Sala de videos;P
