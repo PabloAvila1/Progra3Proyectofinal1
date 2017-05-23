@@ -5,24 +5,11 @@ using System.Web;
 
 namespace Proyectofinal
 {
-    public class Gastos
+    public class Propietarios
     {
-        string identificacion;
         string nombre;
-        string tiporepart;
-
-        public string Identificacion
-        {
-            get
-            {
-                return identificacion;
-            }
-
-            set
-            {
-                identificacion = value;
-            }
-        }
+        string identificacion;
+        string email;
 
         public string Nombre
         {
@@ -37,16 +24,29 @@ namespace Proyectofinal
             }
         }
 
-        public string Tiporepart
+        public string Identificacion
         {
             get
             {
-                return tiporepart;
+                return identificacion;
             }
 
             set
             {
-                tiporepart = value;
+                identificacion = value;
+            }
+        }
+
+        public string Email
+        {
+            get
+            {
+                return email;
+            }
+
+            set
+            {
+                email = value;
             }
         }
     }

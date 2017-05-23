@@ -393,11 +393,14 @@
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Gastos.cs" />
+    <Compile Include="Gastostotales.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Propiedades.cs" />
+    <Compile Include="Propietarios.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
