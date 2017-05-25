@@ -12,6 +12,7 @@ namespace Proyectofinal
         int mts2;
         string identificacion;
         List<string> gastos;
+        string listaporcent;
 
         public string Tipoprop
         {
@@ -75,6 +76,19 @@ namespace Proyectofinal
             set
             {
                 gastos = value;
+            }
+        }
+
+        public string Listaporcent
+        {
+            get
+            {
+                return listaporcent;
+            }
+
+            set
+            {
+                listaporcent = value;
             }
         }
     }

@@ -108,14 +108,37 @@ namespace Proyectofinal
                     if(_textStreamReader.ReadLine()=="L")
                     {
                         Local localtemp = new Local();
+                        localtemp.Tipoprop = _textStreamReader.ReadLine();
+                        localtemp.Codigoprop = _textStreamReader.ReadLine();
+                        localtemp.Mts2 = Convert.ToInt32(_textStreamReader.ReadLine());
+                        localtemp.Identificacion = _textStreamReader.ReadLine();
+                        localtemp.Listaporcent = _textStreamReader.ReadLine();
+                        localtemp.Nombrecomer = _textStreamReader.ReadLine();
+                        localtemp.Actividad = _textStreamReader.ReadLine();
                     }
                     if (_textStreamReader.ReadLine() == "G")
                     {
-                        Garages gastostottemp = new Garages();
+                        Garages garagetemp = new Garages();
+                        garagetemp.Tipoprop = _textStreamReader.ReadLine();
+                        garagetemp.Codigoprop = _textStreamReader.ReadLine();
+                        garagetemp.Mts2 = Convert.ToInt32(_textStreamReader.ReadLine());
+                        garagetemp.Identificacion = _textStreamReader.ReadLine();
+                        garagetemp.Listaporcent = _textStreamReader.ReadLine();
+                        garagetemp.Abierta = _textStreamReader.ReadLine();
+                        garagetemp.Bodega = _textStreamReader.ReadLine();
+
                     }
                     if (_textStreamReader.ReadLine() == "P")
                     {
                         Pisos pisostemp = new Pisos();
+                        pisostemp.Tipoprop = _textStreamReader.ReadLine();
+                        pisostemp.Codigoprop = _textStreamReader.ReadLine();
+                        pisostemp.Mts2 = Convert.ToInt32(_textStreamReader.ReadLine());
+                        pisostemp.Identificacion = _textStreamReader.ReadLine();
+                        pisostemp.Listaporcent = _textStreamReader.ReadLine();
+                        pisostemp.Vhvn = _textStreamReader.ReadLine();
+                        pisostemp.Habitaciones = _textStreamReader.ReadLine();
+
                     }
 
 
