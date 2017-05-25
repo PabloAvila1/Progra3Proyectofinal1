@@ -1,7 +1,9 @@
 ﻿01
 Crater Santiaguito
-Quetzaltenango02
+Quetzaltenango
+02
 Cerro Quemado
-Quetzaltenango03
+Quetzaltenango
+03
 Chicabal
-Quetzaltenango
+Quetzaltenango
