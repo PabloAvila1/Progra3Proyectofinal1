@@ -11,7 +11,7 @@ namespace Proyectofinal
         string codigoprop;
         int mts2;
         string identificacion;
-        string Listgastos;
+        List<string> gastos;
 
         public string Tipoprop
         {
@@ -65,16 +65,16 @@ namespace Proyectofinal
             }
         }
 
-        public string Listgastos1
+        public List<string> Gastos
         {
             get
             {
-                return Listgastos;
+                return gastos;
             }
 
             set
             {
-                Listgastos = value;
+                gastos = value;
             }
         }
     }

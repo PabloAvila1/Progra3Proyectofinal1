@@ -20,7 +20,7 @@ namespace Proyectofinal
         List<Local> listalocales = new List<Local>();
         List<Garages> listagarages = new List<Garages>();
 
-        public void archivos(bool comuni, bool gast)
+        public void archivos(bool comuni, bool gast, bool propietario, bool gastostot, bool propiedadess)
         {
             if(comuni == true)
             {
@@ -55,6 +55,75 @@ namespace Proyectofinal
                     gasttemp.Nombre = _textStreamReader.ReadLine();
                     gasttemp.Tiporepart = _textStreamReader.ReadLine();
                     listagastos.Add(gasttemp);
+                }
+                _textStreamReader.Close();
+            }
+            if (propietario == true)
+            {
+                Assembly _assembly; Stream _imageStream;
+                StreamReader _textStreamReader;
+                _assembly = Assembly.GetExecutingAssembly();
+                _imageStream = _assembly.GetManifestResourceStream("Proyectofinal.Propietarios.bmp");
+                _textStreamReader = new StreamReader(_assembly.GetManifestResourceStream("Proyectofinal.Propietarios.txt"));
+
+                while (_textStreamReader.Peek() > -1)
+                {
+                    Propietarios propitemp = new Propietarios();
+                    propitemp.Nombre = _textStreamReader.ReadLine();
+                    propitemp.Identificacion = _textStreamReader.ReadLine();
+                    propitemp.Email = _textStreamReader.ReadLine();
+                    listapropietarios.Add(propitemp);
+                }
+                _textStreamReader.Close();
+            }
+            if (gastostot == true)
+            {
+                Assembly _assembly; Stream _imageStream;
+                StreamReader _textStreamReader;
+                _assembly = Assembly.GetExecutingAssembly();
+                _imageStream = _assembly.GetManifestResourceStream("Proyectofinal.GastosTotales.bmp");
+                _textStreamReader = new StreamReader(_assembly.GetManifestResourceStream("Proyectofinal.GastosTotales.txt"));
+
+                while (_textStreamReader.Peek() > -1)
+                {
+                    Gastostotales gastostottemp = new Gastostotales();
+                    gastostottemp.Identificaciongasto = _textStreamReader.ReadLine();
+                    gastostottemp.Descripcion = _textStreamReader.ReadLine();
+                    gastostottemp.Importe = Convert.ToInt32(_textStreamReader.ReadLine());
+                    gastostottemp.Zonareparto = _textStreamReader.ReadLine();
+                    listagastostot.Add(gastostottemp);
+                }
+                _textStreamReader.Close();
+            }
+            if (propiedadess == true)
+            {
+                Assembly _assembly; Stream _imageStream;
+                StreamReader _textStreamReader;
+                _assembly = Assembly.GetExecutingAssembly();
+                _imageStream = _assembly.GetManifestResourceStream("Proyectofinal.Propiedades.bmp");
+                _textStreamReader = new StreamReader(_assembly.GetManifestResourceStream("Proyectofinal.Propiedades.txt"));
+
+                while (_textStreamReader.Peek() > -1)
+                {
+                    if(_textStreamReader.ReadLine()=="L")
+                    {
+                        Local localtemp = new Local();
+                    }
+                    if (_textStreamReader.ReadLine() == "G")
+                    {
+                        Garages gastostottemp = new Garages();
+                    }
+                    if (_textStreamReader.ReadLine() == "P")
+                    {
+                        Pisos pisostemp = new Pisos();
+                    }
+
+
+                    //          gastostottemp.Identificaciongasto = _textStreamReader.ReadLine();
+                    //          gastostottemp.Descripcion = _textStreamReader.ReadLine();
+                    //          gastostottemp.Importe = Convert.ToInt32(_textStreamReader.ReadLine());
+                    //          gastostottemp.Zonareparto = _textStreamReader.ReadLine();
+                    //          listagastostot.Add(gastostottemp);
                 }
                 _textStreamReader.Close();
             }
