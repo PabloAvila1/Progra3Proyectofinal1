@@ -22,7 +22,7 @@ namespace Proyectofinal
 
         public void archivos(bool comuni, bool gast, bool propietario, bool gastostot, bool propiedadess)
         {
-            if(comuni == true)
+            if (comuni == true)
             {
                 Assembly _assembly; Stream _imageStream;
                 StreamReader _textStreamReader;
@@ -105,7 +105,7 @@ namespace Proyectofinal
 
                 while (_textStreamReader.Peek() > -1)
                 {
-                    if(_textStreamReader.ReadLine()=="L")
+                    if (_textStreamReader.ReadLine() == "L")
                     {
                         Local localtemp = new Local();
                         localtemp.Tipoprop = _textStreamReader.ReadLine();
@@ -156,10 +156,24 @@ namespace Proyectofinal
         {
 
         }
-
+        public void cargar()
+        {
+            GridView1.DataSource = null;
+            GridView1.DataBind();
+            GridView1.DataSource = listacomunidad;
+            GridView1.DataBind();
+        }
         protected void Button1_Click(object sender, EventArgs e)
         {
-
+            bool a = true, b = true, c = true, d = true, f = true;
+            archivos(a, b, c, d, f);
+            Label1.Text = listacomunidad.Count().ToString();
+            Label2.Text = listapropiedades.Count().ToString();
+            Label3.Text = listagarages.Count().ToString();
+            Label4.Text = listagastostot.Count().ToString();
+            Label5.Text = listagarages.Count().ToString();
+            Label6.Text = listalocales.Count().ToString();
+            Label7.Text = listapisos.Count().ToString();
         }
     }
 }
